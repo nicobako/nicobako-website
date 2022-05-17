@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<article>
+    <h1>Nico Bako's Home Page</h1>
+    <section>
+        This website is all about learning web development basics.
+        This will never be the prettiest or most useful of websites.
+        It's just my little corner of the internet, where I create
+        small apps for myself, friends, and family.
+    </section>
+    <section class="social-links">
+        {% for sml in social_media_links%}
+            <a href="{{sml.link}}" target="_blank">
+                <img class="social-icon" src="{% static sml.static_img %}"></img>
+            </a>
+        {% endfor %}
+    </section>
+</article>
+{% endblock content %}
