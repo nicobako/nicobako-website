@@ -30,11 +30,11 @@
         </nav>
 
         {% if messages %}
-        <ul class="message">
+        <div class="message">
             {% for message in messages %}
-            <li{% if message.tags %} class="message--{{ message.tags }}" {% endif %}>{{ message }}</li>
-                {% endfor %}
-        </ul>
+            <p {% if message.tags %} class="message--{{ message.tags }}" {% endif %}>{{ message }}</p>
+            {% endfor %}
+        </div>
         {% endif %}
         <div id="pages">
             {% block app-nav %} {% endblock app-nav %}

@@ -10,6 +10,9 @@
     --color-teal-dark: #58a196;
     --color-teal-light: #9de1d6;
     --color-white-off: #fffafb;
+    --color--info: rgb(90, 118, 188);
+    --color--success: rgb(107, 179, 134);
+    --color--error: rgb(168, 93, 93);
 }
 
 
@@ -97,8 +100,19 @@ body {
 }
 
 .message {
-    color: aliceblue;
-    background-color: #c4141d;
+    color: rgb(199, 208, 216);
+}
+
+.message--info {
+    background-color: var(--color--info);
+}
+
+.message--success {
+    background-color: var(--color--success);
+}
+
+.message--error {
+    background-color: var(--color--error);
 }
 
 .social {
